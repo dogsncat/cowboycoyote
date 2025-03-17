@@ -6,7 +6,7 @@
     <title>Cowboy Coyote</title>
     <style>
         body {
-            background-color: #1F589D;
+            background-color: #2F55A0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -21,18 +21,18 @@
         }
         @media (min-width: 1024px) {
             .logo {
-                width: 800px; /* Fixed size on desktops */
+                width: 800px; 
             }
         }
-
         .logo {
-            width: 90%;  /* Makes it responsive */
-            max-width: 800px; /* Keeps it at a max size on larger screens */
-            height: auto; /* Maintains aspect ratio */
-            }
+            width: 90%;
+            max-width: 800px;
+            height: auto;
+            animation: bobbing 3s ease-in-out infinite; 
+        }
 
         .content {
-            margin-top: 20px;
+            margin-top: 50px;
             max-width: 600px;
             padding: 20px;
             text-align: center;
@@ -41,12 +41,9 @@
 
         .content p {
             font-size: 18px;
-            background: linear-gradient(90deg, #b2b1b9, #9496ff, #a19dbd, #7975a7);
-            background-size: 400% 100%;
-            animation: shimmer 15s ease-in-out infinite;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; /* Hides text color and reveals the gradient */
+            background-color: rgb(34, 21, 13);
+            color: #E9E2D8;
+            padding: 10px;
         }
 
         img {
@@ -54,16 +51,19 @@
             image-rendering: crisp-edges; 
         }
 
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
+            @keyframes bobbing {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px); 
+                }
+            }
     </style>
 </head>
 <body>
     <img src="cclogomark.png" alt="Logo" class="logo">
     <div class="content">
-        <p>COWBOYCOYOTE.COM</p>
     </div>
 </body>
 </html>
